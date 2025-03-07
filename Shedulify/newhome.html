@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Chord - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background: url('newlogo.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .column {
+            width: 25%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 900px) {
+            .column {
+                width: 50%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Class Chord</h1>
+        <input type="text" id="searchBar" placeholder="Search...">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="general_discussion.html">General Discussion</a></li>
+            <li><a href="chat_space.html">Chat Space</a></li>
+            <li><a href="groups_clubs.html">Groups & Clubs</a></li>
+            <li><a href="connections.html">Connections</a></li>
+        </ul>
+    </nav>
+    
+    <section class="dashboard">
+        <h2>Welcome to Class Chord</h2>
+        <p>Your one-stop platform for college discussions, resources, and networking.</p>
+        
+        <div class="row">
+            <div class="column widget" id="latest-announcements">
+                <h3>Latest Announcements</h3>
+                <ul id="announcementList"></ul>
+            </div>
+            <div class="column widget" id="upcoming-events">
+                <h3>Upcoming Events</h3>
+                <ul id="eventList"></ul>
+            </div>
+            <div class="column widget" id="resources">
+                <h3>Study Resources</h3>
+                <ul>
+                    <li><a href="resources.html">Previous Year Papers</a></li>
+                    <li><a href="resources.html">Study Materials</a></li>
+                    <li><a href="resources.html">Research Papers</a></li>
+                    <li><a href="resources.html">Library Access</a></li>
+                </ul>
+            </div>
+            <div class="column widget" id="ai-chat">
+                <h3>AI Chat Assistant</h3>
+                <div id="chat-box">
+                    <p id="chat-response">Ask me anything about Class Chord!</p>
+                    <input type="text" id="userInput" placeholder="Type your question...">
+                    <button onclick="getAIResponse()">Ask</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

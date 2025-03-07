@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login - College Community Hub</title>
+</head>
+<body>
+   
+  <!-- Login Container -->
+  <div class="login-container">
+    <h1>Class Chord</h1>
+    <form class="login-form">
+      <!-- Username Field -->
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+
+      <!-- Password Field -->
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+
+      <!-- Login Button -->
+      <button type="button" onclick="validateLogin()">Log in</button>
+
+      <!-- Sign Up Link -->
+      <p class="signup-link">
+        <span style="color: #ecf0f1;">Don't have an account?</span> 
+        <a href="signup.html" style="color: #ecf0f1;">Sign up</a>
+      </p>
+      
+      <!-- Error Message -->
+      <p id="errorMessage" style="color: red; display: none;">Invalid username or password. Please try again.</p>
+    </form>
+  </div>
+
+  <script>
+    function validateLogin() {
+        // Dummy user credentials (Replace with backend authentication)
+        const validUsername = "indu";
+        const validPassword = "password123";
+    
+        // Get user input values
+        let username = document.getElementById("username").value.trim();
+        let password = document.getElementById("password").value.trim();
+        let errorMessage = document.getElementById("errorMessage");
+
+        console.log("Username Entered:", username);
+        console.log("Password Entered:", password);
+
+        // Check if the credentials match
+        if (username === validUsername && password === validPassword) {
+            alert("Login Successful!");
+            console.log("Redirecting to home page...");
+            window.location.assign("home.html"); // Redirect to home page
+        } else {
+            console.log("Invalid credentials");
+            errorMessage.style.display = "block"; // Show error message
+        }
+    }
+  </script>
+
+</body>
+</html>

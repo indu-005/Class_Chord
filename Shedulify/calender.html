@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Class Chord</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="calendar-container">
+        <h1>📆 Academic Calendar</h1>
+
+        <!-- Current Date Display -->
+        <div class="date-display">
+            <h2 id="current-date"></h2>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="events-section">
+            <h2>🎉 Upcoming Events & Classes</h2>
+            <ul id="events-list">
+                <li>📢 Seminar on AI - March 15, 2025</li>
+                <li>📚 Final Exams Start - April 10, 2025</li>
+                <li>🎓 Graduation Ceremony - May 25, 2025</li>
+            </ul>
+        </div>
+
+        <!-- Alarm for Exams & Results -->
+        <div class="alarm-section">
+            <h2>⏰ Exam & Result Alerts</h2>
+            <p id="exam-alert">Checking upcoming exams...</p>
+        </div>
+
+        <!-- Event Creation & Classroom Booking -->
+        <div class="event-booking">
+            <h2>📝 Create Event / Book Classroom</h2>
+            <label for="event-date">Select Date:</label>
+            <input type="date" id="event-date">
+            
+            <label for="event-name">Event Name:</label>
+            <input type="text" id="event-name" placeholder="Enter event name">
+
+            <button onclick="createEvent()">Add Event</button>
+            <p id="confirmation-message"></p>
+        </div>
+    </div>
+
+    <script src="calendar.js"></script>
+</body>
+</html>

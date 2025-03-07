@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up - College Community Hub</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Class Chord</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sign-Up Container -->
+  <div class="signup-container">
+    <h1>Sign Up</h1>
+    <form class="signup-form">
+      <!-- Full Name Field -->
+      <div class="input-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <!-- Email Field -->
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <!-- Username Field -->
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Choose a username" required>
+      </div>
+
+      <!-- Password Field -->
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Choose a password" required>
+      </div>
+
+      <!-- Confirm Password Field -->
+      <div class="input-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+      </div>
+
+      <!-- Sign-Up Button -->
+      <button type="submit" class="signup-button">Sign Up</button>
+
+      <!-- Login Link -->
+      <p class="login-link">
+        Already have an account? <a href="login.html">Log in</a>
+      </p>
+      <script>
+        function validateLogin() {
+            // Dummy user credentials (Replace with backend authentication)
+            const validUsername = "indu";
+            const validPassword = "password123";
+        
+            // Get user input values
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let errorMessage = document.getElementById("errorMessage");
+    
+            console.log("Username Entered:", username);
+            console.log("Password Entered:", password);
+    
+            // Check if the credentials match
+            if (username === validUsername && password === validPassword) {
+                alert("Login Successful!");
+                console.log("Redirecting to home page...");
+                window.location.assign("home.html"); // Redirect to home page
+            } else {
+                console.log("Invalid credentials");
+                errorMessage.style.display = "block"; // Show error message
+            }
+        }
+      </script>
+    </form>
+  </div>
+</body>
+</html>
+</body>
+</html>
